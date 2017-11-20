@@ -340,7 +340,7 @@ bluebird@3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.2.1.tgz#3cecf3504904c30ce3e79c170877e893a11910fd"
 
-bluebird@^3.1.1:
+bluebird@^3.1.1, bluebird@^3.4.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.1.tgz#d9551f9de98f1fcda1e683d17ee91a0602ee2eb9"
 
@@ -2096,7 +2096,7 @@ lodash@3.8.0:
   version "3.8.0"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.8.0.tgz#376eb98bdcd9382a9365c33c4cb8250de1325b91"
 
-lodash@>=2.4.x, lodash@^4.0.1, lodash@^4.8.0, lodash@^4.8.2, lodash@~4.17.4:
+lodash@>=2.4.x, lodash@^4.0.1, lodash@^4.12.0, lodash@^4.8.0, lodash@^4.8.2, lodash@~4.17.4:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -3223,6 +3223,13 @@ sails-mongo@^0.12.2:
     validator "4.5.1"
     waterline-cursor "0.0.7"
     waterline-errors "0.10.1"
+
+sails-pager@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/sails-pager/-/sails-pager-2.1.0.tgz#ed159cbce297ccc67318d8eaf001aaa49608187d"
+  dependencies:
+    bluebird "^3.4.1"
+    lodash "^4.12.0"
 
 sails-stringfile@~0.3.2:
   version "0.3.2"

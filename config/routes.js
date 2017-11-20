@@ -30,4 +30,9 @@ module.exports.routes = {
     action: 'index'
   },
 
+  '/api/posts': {
+    controller: 'PostController',
+    action: 'index'
+  }
+
 }

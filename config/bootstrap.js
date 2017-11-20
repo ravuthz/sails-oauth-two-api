@@ -40,9 +40,9 @@ function createClient(theClient) {
     if(err){
       console.log(err.message);
     } else {
-      if(!client){
+      if (!client) {
         Client.create(theClient).exec(function(err, client) {
-          if(err){
+          if (err) {
             console.log(err.message);
           } else {
             logClient(client, "The " + theClient.name + " created");
@@ -53,6 +53,26 @@ function createClient(theClient) {
       }
     }
   }); 
+}
+
+function createPost(thePost) {
+  Post.findOne({title: thePost.title}, function(err, post) {
+    if (err) {
+      console.log(err.message);
+    } else {
+      if(!post) {
+        Post.create(thePost).exec(function(err, createdPost) {
+          if (err) {
+            console.log(err.message);
+          } else {
+            console.log("The post " + thePost.title + " created successfully.");
+          }
+        });
+      } else {
+        console.log("The post " + thePost.title + " created successfully.");
+      }
+    }
+  });
 }
 
 module.exports.bootstrap = function (cb) {
@@ -73,6 +93,13 @@ module.exports.bootstrap = function (cb) {
     trusted: false,
     redirectURI: 'http://localhost:1339'
   });
+  
+  for (var i=1; i<=100; i++) {
+    createPost({
+      title: 'test-title-' + i,
+      content: 'test-content-' + i
+    });
+  }
   
   cb();
 };
